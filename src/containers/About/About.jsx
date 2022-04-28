@@ -17,12 +17,12 @@ const abouts = [
   {
     title: "MERN Stack Developer",
     description: "I am a good MERN Stack Developer.",
-    imgUrl: images.about02
+    imgUrl: images.about03
   },
   {
     title: "App Developer",
     description: "I am a good App Developer.",
-    imgUrl: images.about03
+    imgUrl: images.about04
   }
 ];
 
