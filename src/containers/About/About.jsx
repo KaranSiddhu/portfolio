@@ -8,22 +8,22 @@ import MotionWrap from "../../Wrapper/MotionWrap";
 const abouts = [
   {
     title: "Frontend Developer",
-    description: "I am a good frontend Developer.",
+    description: "I am a frontend Developer with a passion for building beautiful and functional web application.",
     imgUrl: images.about01
   },
   {
     title: "Backend Developer",
-    description: "I am a good backend Developer.",
+    description: "I am a backend Developer who can create the web services and APIs used by front-end developers.",
     imgUrl: images.about02
   },
-  {
-    title: "MERN Stack Developer",
-    description: "I am a good MERN Stack Developer.",
-    imgUrl: images.about03
-  },
+  // {
+  //   title: "MERN Stack Developer",
+  //   description: "I am a good MERN Stack Developer.",
+  //   imgUrl: images.about03
+  // },
   {
     title: "App Developer",
-    description: "I am a good App Developer.",
+    description: "I am a App Developer with a passion for building beautiful and functional mobile application.",
     imgUrl: images.about04
   }
 ];
