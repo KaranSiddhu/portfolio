@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 import { AppWrap } from "../../Wrapper/index";
 import Projects from "../../data/projectsData";
+import MotionWrap from "../../Wrapper/MotionWrap";
 
 const allButtons = ["Frontend", "Backend", "Mobile App", "All"];
 
@@ -109,4 +110,4 @@ const Work = () => {
   );
 };
 
-export default AppWrap(Work, "projects");
+export default AppWrap(MotionWrap(Work, "app__works"), "projects", "app__primarybg");
