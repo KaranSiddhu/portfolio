@@ -12,12 +12,12 @@ const allButtons = ["Frontend", "Backend", "Mobile App", "All"];
 const Work = () => {
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState("Frontend");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
     setWorks(Projects);
-    setFilterWork(Projects);
+    setFilterWork(Projects.filter((work) => work.tags.includes(activeFilter)));
   }, []);
 
   const handleWorkFilter = (item) => {
