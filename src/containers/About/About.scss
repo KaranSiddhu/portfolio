@@ -36,3 +36,22 @@
     }
   }
 }
+
+.btn {
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--secondary-color);
+
+  font-weight: 500;
+  color: var(--white-color);
+  outline: none;
+  font-family: var(--font-base);
+  text-decoration: none;
+  transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  cursor: pointer;
+
+  &:hover {
+    background-color: #2430af;
+  }
+}

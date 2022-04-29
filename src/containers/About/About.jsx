@@ -8,12 +8,14 @@ import MotionWrap from "../../Wrapper/MotionWrap";
 const abouts = [
   {
     title: "Frontend Developer",
-    description: "I am a frontend Developer with a passion for building beautiful and functional web application.",
+    description:
+      "I am a frontend Developer with a passion for building beautiful and functional web application.",
     imgUrl: images.about01
   },
   {
     title: "Backend Developer",
-    description: "I am a backend Developer who can create the web services and APIs used by front-end developers.",
+    description:
+      "I am a backend Developer who can create the web services and APIs used by front-end developers.",
     imgUrl: images.about02
   },
   // {
@@ -23,7 +25,8 @@ const abouts = [
   // },
   {
     title: "App Developer",
-    description: "I am a App Developer with a passion for building beautiful and functional mobile application.",
+    description:
+      "I am a App Developer with a passion for building beautiful and functional mobile application.",
     imgUrl: images.about04
   }
 ];
@@ -31,8 +34,11 @@ const abouts = [
 const About = () => {
   return (
     <>
-      <h2 className="head-text">
+      {/* <h2 className="head-text">
         I know that <span>Good Development</span> <br /> means <span>Good Business</span>
+      </h2> */}
+      <h2 className="head-text">
+        Code <span>never lies</span>, <br /> Comment <span>sometimes do</span>
       </h2>
 
       <div className="app__profiles">
@@ -55,6 +61,14 @@ const About = () => {
           </motion.div>
         ))}
       </div>
+      <a
+        href="https://drive.google.com/file/d/1gFn6x12Ue6Wg6A6DyK4mbnQvdXQ-W225/view"
+        target="_blank"
+        rel="noreferrer"
+        className="btn"
+      >
+        Download Resume
+      </a>
     </>
   );
 };

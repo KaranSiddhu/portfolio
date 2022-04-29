@@ -1,4 +1,6 @@
+import axios from "axios";
 import React, { useState } from "react";
+import { useMutation } from "react-query";
 
 import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../Wrapper/index";
@@ -6,15 +8,37 @@ import { AppWrap, MotionWrap } from "../../Wrapper/index";
 import "./Footer.scss";
 
 const Footer = () => {
-
   const [userName, setUserName] = useState("");
-  const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = () => {};
+  const handleSubmit = async () => {
+    if (userName === "" || message === "") {
+      alert("Both fields are mandatory");
+      return;
+    }
+    setIsLoading(true);
+    const config = {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    };
+
+    const { data } = await axios.post(
+      "https://portfolio-mailjet-service.herokuapp.com/email",
+      {
+        name: userName,
+        message
+      },
+      config
+    );
+
+    // console.log("Data - ", data);
+    setIsLoading(false);
+    setIsFormSubmitted(true);
+  };
 
   return (
     <>
@@ -24,7 +48,7 @@ const Footer = () => {
         <div className="app__footer-card ">
           <img src={images.email} alt="email" />
           <a href="mailto:karansiddhu22@gmail.com" className="p-text">
-          karansiddhu22@gmail.com
+            karansiddhu22@gmail.com
           </a>
         </div>
         {/* <div className="app__footer-card">
@@ -46,16 +70,7 @@ const Footer = () => {
               onChange={(e) => setUserName(e.target.value)}
             />
           </div>
-          <div className="app__flex">
-            <input
-              className="p-text"
-              type="email"
-              placeholder="Your Email"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
+
           <div>
             <textarea
               className="p-text"
@@ -66,7 +81,7 @@ const Footer = () => {
             />
           </div>
           <button type="button" className="p-text" onClick={handleSubmit}>
-            {!loading ? "Send Message" : "Sending..."}
+            {!isLoading ? "Send Message" : "Sending..."}
           </button>
         </div>
       ) : (

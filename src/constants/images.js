@@ -21,6 +21,12 @@ import profile1 from "../assets/profile1.png";
 import circle from "../assets/circle.svg";
 import logo from "../assets/logo1.ico";
 
+import codengeek from "../assets/projects/codengeek.png";
+import codengeekBackend from "../assets/projects/codengeekbackend.png";
+import iicbackend from "../assets/projects/iicbackend.png";
+import iic from "../assets/projects/iic.png";
+import iicAdmin from "../assets/projects/iicadmin.png";
+
 export default {
   email,
   cpp,
@@ -42,4 +48,11 @@ export default {
   profile1,
   circle,
   logo,
+  project:{
+    codengeek,
+    iicbackend,
+    iic,
+    iicAdmin,
+    codengeekBackend
+  }
 };
